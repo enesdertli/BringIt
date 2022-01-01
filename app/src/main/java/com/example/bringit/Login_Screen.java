@@ -34,14 +34,6 @@ public class Login_Screen extends AppCompatActivity {
             }
         });
 
-        txtForgotPassword = findViewById(R.id.txtForgotPassword);
-        txtForgotPassword.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Login_Screen.this,Forgot_Password_Screen.class);
-                startActivity(intent);
-            }
-        });
 
         button = findViewById(R.id.btnLogIn);
         button.setOnClickListener(new View.OnClickListener() {

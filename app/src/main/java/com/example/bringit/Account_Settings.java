@@ -30,6 +30,7 @@ public class Account_Settings extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Account_Settings.this,MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -39,6 +40,7 @@ public class Account_Settings extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Account_Settings.this,Basket.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -48,6 +50,7 @@ public class Account_Settings extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Account_Settings.this,Account_Settings.class);
                 startActivity(intent);
+                finish();
             }
         });
 

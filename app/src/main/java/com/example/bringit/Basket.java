@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 
 public class Basket extends AppCompatActivity {
@@ -14,6 +15,7 @@ public class Basket extends AppCompatActivity {
     ImageView imageHome;
     ImageView imageBasket;
     ImageView imagePerson;
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,7 @@ public class Basket extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Basket.this,MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -38,6 +41,7 @@ public class Basket extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Basket.this,Basket.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -46,6 +50,16 @@ public class Basket extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Basket.this,Account_Settings.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        button = findViewById(R.id.btnConfirmBasket);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Basket.this,Order_Screen.class);
                 startActivity(intent);
             }
         });

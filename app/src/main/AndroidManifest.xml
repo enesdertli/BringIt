@@ -22,9 +22,6 @@
             android:name=".Add_to_basket"
             android:exported="false" />
         <activity
-            android:name=".Forgot_Password_Screen"
-            android:exported="false" />
-        <activity
             android:name=".Register_Screen"
             android:exported="false" />
         <activity

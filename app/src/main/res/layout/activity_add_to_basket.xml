@@ -6,16 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Add_to_basket">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="336dp"
-        android:layout_height="188dp"
-        android:layout_marginTop="64dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/exm" />
-
     <Button
         android:id="@+id/btnAddToBasket"
         android:layout_width="300dp"

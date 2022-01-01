@@ -1,22 +1,49 @@
 package com.example.bringit;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.renderscript.ScriptGroup;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+public class MainActivity extends AppCompatActivity implements FoodFragment.OnProductSelected {
+    private FirebaseStorage firebaseStorage;
+    private FirebaseAuth auth;
+    private FirebaseFirestore firebaseFirestore;
+    private StorageReference storageReference;
+
+
+
 
 
     ImageView imageHome;
     ImageView imageBasket;
     ImageView imagePerson;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,31 +53,47 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
 
-        imageHome = findViewById(R.id.imgHome);
-        imageHome.setOnClickListener(new View.OnClickListener() {
+
+
+        firebaseStorage = FirebaseStorage.getInstance();
+        auth = FirebaseAuth.getInstance();
+        firebaseFirestore = FirebaseFirestore.getInstance();
+        storageReference = firebaseStorage.getReference();
+
+        getData();
+
+
+
+
+
+}
+
+    public void getData(){
+
+        firebaseFirestore.collection("products").addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,MainActivity.class);
-                startActivity(intent);
+            public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
+                if(error!= null){
+                    Toast.makeText(MainActivity.this,error.getLocalizedMessage(),Toast.LENGTH_LONG).show();
+                }
+
+
+                if(value != null){
+                    for(DocumentSnapshot snapshot : value.getDocuments()){
+                        Map<String, Object> data = snapshot.getData();
+                        String comment =(String) data.get("comment");
+
+                    }
+
+                }
             }
         });
 
-        imageBasket = findViewById(R.id.imgBasket);
-        imageBasket.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,Basket.class);
-                startActivity(intent);
-            }
-        });
+    }
 
-        imagePerson = findViewById(R.id.imgPerson);
-        imagePerson.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,Account_Settings.class);
-                startActivity(intent);
-            }
-        });
+
+    @Override
+    public void productSelected(Products products) {
+
     }
 }

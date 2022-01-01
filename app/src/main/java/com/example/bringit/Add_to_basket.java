@@ -31,6 +31,7 @@ public class Add_to_basket extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Add_to_basket.this,MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -40,6 +41,7 @@ public class Add_to_basket extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Add_to_basket.this,Basket.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -49,6 +51,7 @@ public class Add_to_basket extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Add_to_basket.this,Account_Settings.class);
                 startActivity(intent);
+                finish();
             }
         });
         btnAddToBasket = findViewById(R.id.btnAddToBasket);
@@ -57,6 +60,7 @@ public class Add_to_basket extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Add_to_basket.this,Basket.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

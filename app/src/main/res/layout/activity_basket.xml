@@ -10,10 +10,10 @@
         android:id="@+id/txtYourItems"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
         android:text="Your Items"
-        android:layout_marginTop="128dp"
-        android:textStyle="bold"
         android:textSize="24dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -33,41 +33,41 @@
         app:layout_constraintHorizontal_bias="0.924"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <View
-        android:id="@+id/botViewHome"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:background="#FFFFFF"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/menu_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent">
 
-    <ImageView
-        android:id="@+id/imgPerson"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="56dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/botViewHome"
-        app:srcCompat="@drawable/ic_baseline_person_24" />
+        <ImageView
+            android:id="@+id/imgHome"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="56dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_baseline_home_24"
+            tools:ignore="MissingConstraints" />
 
-    <ImageView
-        android:id="@+id/imgHome"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="56dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/botViewHome"
-        app:srcCompat="@drawable/ic_baseline_home_24" />
+        <ImageView
+            android:id="@+id/imgBasket"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintEnd_toStartOf="@+id/imgPerson"
+            app:layout_constraintStart_toEndOf="@+id/imgHome"
+            app:srcCompat="@drawable/ic_basket"
+            tools:ignore="MissingConstraints" />
 
-    <ImageView
-        android:id="@+id/imgBasket"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        app:layout_constraintBottom_toBottomOf="@+id/botViewHome"
-        app:layout_constraintEnd_toStartOf="@+id/imgPerson"
-        app:layout_constraintStart_toEndOf="@+id/imgHome"
-        app:srcCompat="@drawable/ic_basket" />
+        <ImageView
+            android:id="@+id/imgPerson"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="56dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_baseline_person_24"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
         android:id="@+id/imgTrash"
@@ -93,7 +93,6 @@
         app:layout_constraintStart_toEndOf="@+id/imgTrash"
         app:layout_constraintTop_toTopOf="@+id/imgTrash"
         app:layout_constraintVertical_bias="0.535" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
