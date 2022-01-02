@@ -2,12 +2,16 @@ package com.example.bringit;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
+
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.renderscript.ScriptGroup;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -94,6 +98,25 @@ public class MainActivity extends AppCompatActivity implements FoodFragment.OnPr
 
     @Override
     public void productSelected(Products products) {
+            Log.d("Main Activity", products.getDescription());
 
+        int display_mode = getResources().getConfiguration().orientation;
+        if (display_mode == Configuration.ORIENTATION_PORTRAIT) {
+
+
+            Intent intent = new Intent(this, DetailsActivity.class);
+            intent.putExtra("products", products);
+            startActivity(intent);
+        }else{
+            DetailsFragment df = (DetailsFragment) getSupportFragmentManager().findFragmentByTag("details");
+            if(df == null){
+                FragmentTransaction fts = getSupportFragmentManager().beginTransaction();
+                df = DetailsFragment.newInstance(products);
+                fts.add(R.id.container, df, "details");
+                fts.commit();
+            }else{
+                df.setProducts(findViewById(R.id.container),products);
+            }
+        }
     }
 }

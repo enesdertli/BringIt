@@ -16,10 +16,12 @@
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/drawable/ic_wave.xml" value="0.3828125" />
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/drawable/round_border.xml" value="0.3828125" />
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/drawable/vie_bg.xml" value="0.3828125" />
+        <entry key="..\:/Projeler/Bringitres/app/src/main/res/layout-land/activity_main.xml" value="0.18" />
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/layout/aassdd.xml" value="0.36666666666666664" />
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/layout/activity_account_settings.xml" value="0.36666666666666664" />
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/layout/activity_add_to_basket.xml" value="0.36666666666666664" />
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/layout/activity_basket.xml" value="0.36666666666666664" />
+        <entry key="..\:/Projeler/Bringitres/app/src/main/res/layout/activity_details.xml" value="0.1" />
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/layout/activity_forgot_password_screen.xml" value="0.36666666666666664" />
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/layout/activity_home_screen.xml" value="0.36666666666666664" />
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/layout/activity_items.xml" value="0.36666666666666664" />
@@ -27,6 +29,8 @@
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/layout/activity_order_screen.xml" value="0.36666666666666664" />
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/layout/activity_register_screen.xml" value="0.36666666666666664" />
+        <entry key="..\:/Projeler/Bringitres/app/src/main/res/layout/array_adapter.xml" value="0.1" />
+        <entry key="..\:/Projeler/Bringitres/app/src/main/res/layout/fragment_details.xml" value="0.33" />
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/layout/fragment_food.xml" value="0.36666666666666664" />
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/layout/fragment_food_list.xml" value="0.33" />
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/layout/recycler_row.xml" value="0.36666666666666664" />
