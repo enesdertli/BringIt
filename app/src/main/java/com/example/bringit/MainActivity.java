@@ -66,6 +66,38 @@ public class MainActivity extends AppCompatActivity implements FoodFragment.OnPr
 
         getData();
 
+        imageHome = findViewById(R.id.imgHome);
+        imageHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,MainActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        imageBasket = findViewById(R.id.imgBasket);
+        imageBasket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,Basket.class);
+                startActivity(intent);
+
+            }
+        });
+
+        imagePerson = findViewById(R.id.imgPerson);
+        imagePerson.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,Account_Settings.class);
+                startActivity(intent);
+
+            }
+        });
+
+
+
 
 
 
