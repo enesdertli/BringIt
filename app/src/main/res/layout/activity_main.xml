@@ -50,36 +50,58 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/tur1"
+                    android:id="@+id/btnFavourite"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:background="@drawable/button_background_pink"
+                    android:textColor="#efe7dd"
                     android:text="Favourite"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
-                    android:id="@+id/tur2"
+                    android:id="@+id/btnMeatball"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="meat" />
+                    android:layout_marginBottom="7dp"
+                    android:background="@drawable/button_background_pink"
+                    android:textColor="#efe7dd"
+                    android:text="Meatball" />
 
                 <Button
-                    android:id="@+id/tur3"
+                    android:id="@+id/btnChickens"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="3" />
+                    android:layout_marginBottom="7dp"
+                    android:background="@drawable/button_background_pink"
+                    android:textColor="#efe7dd"
+                    android:text="Chicken" />
 
                 <Button
-                    android:id="@+id/tur4"
+                    android:id="@+id/btnMeats"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="4" />
+                    android:layout_marginBottom="7dp"
+                    android:background="@drawable/button_background_pink"
+                    android:textColor="#efe7dd"
+                    android:text="Meat" />
 
                 <Button
-                    android:id="@+id/tur5"
+                    android:id="@+id/btnDrinks"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="5" />
+                    android:background="@drawable/button_background_pink"
+                    android:layout_marginBottom="7dp"
+                    android:textColor="#efe7dd"
+                    android:text="DRINK" />
+                <Button
+                    android:id="@+id/btnDesserts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_background_pink"
+                    android:textColor="#efe7dd"
+                    android:text="Dessert" />
 
             </LinearLayout>
         </ScrollView>

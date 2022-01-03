@@ -8,13 +8,13 @@
 
     <Button
         android:id="@+id/btnAddToBasket"
-        android:layout_width="300dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="144dp"
-        android:background="@drawable/button_background_green"
+        android:background="@drawable/button_background_pink"
+        android:textColor="#efe7dd"
         android:padding="16dp"
         android:text="Add to Basket"
-        android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

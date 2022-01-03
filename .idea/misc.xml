@@ -6,15 +6,18 @@
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3828125" />
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/drawable/button_background.xml" value="0.3828125" />
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/drawable/button_background_green.xml" value="0.3828125" />
+        <entry key="..\:/Projeler/Bringitres/app/src/main/res/drawable/button_background_pink.xml" value="0.3828125" />
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/drawable/button_background_red.xml" value="0.3828125" />
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/drawable/button_color.xml" value="0.3828125" />
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/drawable/green_button_color.xml" value="0.3828125" />
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.3828125" />
+        <entry key="..\:/Projeler/Bringitres/app/src/main/res/drawable/ic_basket.xml" value="0.3828125" />
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3828125" />
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/drawable/ic_person.xml" value="0.3828125" />
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/drawable/ic_splash.xml" value="0.3828125" />
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/drawable/ic_wave.xml" value="0.3828125" />
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/drawable/round_border.xml" value="0.3828125" />
+        <entry key="..\:/Projeler/Bringitres/app/src/main/res/drawable/round_border_without_radius.xml" value="0.3828125" />
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/drawable/vie_bg.xml" value="0.3828125" />
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/layout-land/activity_main.xml" value="0.18" />
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/layout/aassdd.xml" value="0.36666666666666664" />
@@ -30,6 +33,7 @@
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/layout/activity_order_screen.xml" value="0.36666666666666664" />
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/layout/activity_register_screen.xml" value="0.36666666666666664" />
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/layout/array_adapter.xml" value="0.1" />
+        <entry key="..\:/Projeler/Bringitres/app/src/main/res/layout/dropdown_item.xml" value="0.25" />
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/layout/fragment_details.xml" value="0.33" />
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/layout/fragment_food.xml" value="0.36666666666666664" />
         <entry key="..\:/Projeler/Bringitres/app/src/main/res/layout/fragment_food_list.xml" value="0.33" />
