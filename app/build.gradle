@@ -1,8 +1,4 @@
-plugins {
-    id 'com.android.application'
-    id 'com.google.gms.google-services'
-}
-
+apply plugin: 'com.android.application'
 android {
     compileSdk 32
 
@@ -49,3 +45,4 @@ dependencies {
     implementation 'com.google.firebase:firebase-storage'
 
 }
+apply plugin: 'com.google.gms.google-services'

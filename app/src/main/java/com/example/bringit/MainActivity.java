@@ -35,9 +35,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity implements FoodFragment.OnProductSelected {
+    private FirebaseFirestore firebaseFirestore;
+
     private FirebaseStorage firebaseStorage;
     private FirebaseAuth auth;
-    private FirebaseFirestore firebaseFirestore;
     private StorageReference storageReference;
 
 
@@ -58,10 +59,10 @@ public class MainActivity extends AppCompatActivity implements FoodFragment.OnPr
         setContentView(R.layout.activity_main);
 
 
+        firebaseFirestore = FirebaseFirestore.getInstance();
 
         firebaseStorage = FirebaseStorage.getInstance();
         auth = FirebaseAuth.getInstance();
-        firebaseFirestore = FirebaseFirestore.getInstance();
         storageReference = firebaseStorage.getReference();
 
         getData();

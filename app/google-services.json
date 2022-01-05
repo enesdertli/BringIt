@@ -1,33 +1,41 @@
 {
   "project_info": {
-    "project_number": "1009264147282",
-    "project_id": "bring-it-2d4d2",
-    "storage_bucket": "bring-it-2d4d2.appspot.com"
+    "project_number": "1054414033449",
+    "project_id": "bring-it-1afe9",
+    "storage_bucket": "bring-it-1afe9.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1009264147282:android:4b15a16da4abdbdc3d988b",
+        "mobilesdk_app_id": "1:1054414033449:android:d8d9e8b0e5233182c3c238",
         "android_client_info": {
           "package_name": "com.example.bringit"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1009264147282-nuulc2541p2j6iiahmpo3qgacee2co7e.apps.googleusercontent.com",
+          "client_id": "1054414033449-iirtjafd81vbchgj5hpnnks3dudvinsk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bringit",
+            "certificate_hash": "b28a4c1e20a81ae1c8f6f61431471d1482a36510"
+          }
+        },
+        {
+          "client_id": "1054414033449-eme4ru12vv7jautraoigqlk86lmrg23a.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB5dfriy4nMERMoWm-LilodatGqXb9oTxA"
+          "current_key": "AIzaSyCdHg4DeuiOobDPuEJWKPa2qc5hs_12tz0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1009264147282-nuulc2541p2j6iiahmpo3qgacee2co7e.apps.googleusercontent.com",
+              "client_id": "1054414033449-eme4ru12vv7jautraoigqlk86lmrg23a.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
