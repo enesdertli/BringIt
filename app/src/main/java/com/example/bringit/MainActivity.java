@@ -1,5 +1,6 @@
 package com.example.bringit;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
@@ -12,6 +13,9 @@ import android.os.Handler;
 import android.os.Looper;
 import android.renderscript.ScriptGroup;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -20,6 +24,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.bringit.databinding.ActivityMainBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -36,19 +41,14 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity implements FoodFragment.OnProductSelected {
     private FirebaseFirestore firebaseFirestore;
-
     private FirebaseStorage firebaseStorage;
     private FirebaseAuth auth;
     private StorageReference storageReference;
 
 
-
-
-
     ImageView imageHome;
     ImageView imageBasket;
     ImageView imagePerson;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,12 +60,10 @@ public class MainActivity extends AppCompatActivity implements FoodFragment.OnPr
 
 
         firebaseFirestore = FirebaseFirestore.getInstance();
-
         firebaseStorage = FirebaseStorage.getInstance();
         auth = FirebaseAuth.getInstance();
         storageReference = firebaseStorage.getReference();
 
-        getData();
 
         imageHome = findViewById(R.id.imgHome);
         imageHome.setOnClickListener(new View.OnClickListener() {
@@ -97,16 +95,10 @@ public class MainActivity extends AppCompatActivity implements FoodFragment.OnPr
             }
         });
     //Hello
-        //hello2
-
-
-
-
-
-
+        // hello2
 }
 
-    public void getData(){
+   /* public void getData(){
 
         firebaseFirestore.collection("products").addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
@@ -127,7 +119,9 @@ public class MainActivity extends AppCompatActivity implements FoodFragment.OnPr
             }
         });
 
-    }
+    } */
+
+
 
 
     @Override

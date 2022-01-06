@@ -10,7 +10,11 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class Account_Settings extends AppCompatActivity {
+
+    private FirebaseAuth auth;
 
     ImageView imageHome;
     ImageView imageBasket;
@@ -23,6 +27,8 @@ public class Account_Settings extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_account_settings);
+
+        auth = FirebaseAuth.getInstance();
 
         imageHome = findViewById(R.id.imgHome);
         imageHome.setOnClickListener(new View.OnClickListener() {
@@ -54,5 +60,12 @@ public class Account_Settings extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void signOut(View view){
+        auth.signOut();
+        Intent intent = new Intent(Account_Settings.this,Login_Screen.class);
+        startActivity(intent);
+        finish();
     }
 }

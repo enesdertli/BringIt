@@ -88,6 +88,7 @@
         android:layout_marginStart="240dp"
         android:layout_marginTop="140dp"
         android:layout_marginEnd="32dp"
+        android:onClick="signUpClicked"
         android:text="Create new account"
         android:textColor="#Fe93a0"
         android:textSize="25dp"
