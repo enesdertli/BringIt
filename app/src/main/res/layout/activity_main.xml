@@ -66,8 +66,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="7dp"
                     android:background="@drawable/button_background_pink"
-                    android:textColor="#efe7dd"
-                    android:text="Meatball" />
+                    android:onClick="getMeatball"
+                    android:text="Meatball"
+                    android:textColor="#efe7dd" />
 
                 <Button
                     android:id="@+id/btnChickens"

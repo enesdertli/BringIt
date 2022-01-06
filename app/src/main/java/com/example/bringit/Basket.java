@@ -64,4 +64,8 @@ public class Basket extends AppCompatActivity {
             }
         });
     }
+
+    /*public void trashBasket(View view){
+        Delete all the items in basket
+    }*/
 }

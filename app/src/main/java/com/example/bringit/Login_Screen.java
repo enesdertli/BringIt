@@ -23,11 +23,11 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class Login_Screen extends AppCompatActivity {
 
-    TextView txtNewUser;
-    TextView txtForgotPassword;
-    Button button;
+
     private ActivityLoginScreenBinding binding;
     private FirebaseAuth auth;
+
+    TextView txtNewUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +57,7 @@ public class Login_Screen extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
 
     }
 

@@ -25,6 +25,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.bringit.databinding.ActivityMainBinding;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -65,6 +66,7 @@ public class MainActivity extends AppCompatActivity implements FoodFragment.OnPr
         storageReference = firebaseStorage.getReference();
 
 
+
         imageHome = findViewById(R.id.imgHome);
         imageHome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,6 +76,7 @@ public class MainActivity extends AppCompatActivity implements FoodFragment.OnPr
 
             }
         });
+
 
         imageBasket = findViewById(R.id.imgBasket);
         imageBasket.setOnClickListener(new View.OnClickListener() {
@@ -94,11 +97,22 @@ public class MainActivity extends AppCompatActivity implements FoodFragment.OnPr
 
             }
         });
-    //Hello
-        // hello2
 }
 
-   /* public void getData(){
+    /*
+    public void getMeatball(View view){
+        String imageName = "meatball/" + "kofte1.jpg";
+        StorageReference newReference = firebaseStorage.getReference(imageName);
+        newReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                String downloadUrl = uri.toString();
+
+            }
+        });
+    }
+
+    public void getData(){
 
         firebaseFirestore.collection("products").addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
