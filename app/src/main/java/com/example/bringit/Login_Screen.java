@@ -40,14 +40,13 @@ public class Login_Screen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_screen);
 
-
-
         txtNewUser = findViewById(R.id.txtNewUser);
         txtNewUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Login_Screen.this, Register_Screen.class);
                 startActivity(intent);
+                finish();
             }
         });
         mEmail = findViewById(R.id.txtEmail);
