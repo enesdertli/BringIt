@@ -38,7 +38,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:background="@drawable/button_background_pink"
-            android:onClick="signInClicked"
             android:padding="16dp"
             android:text="LOG IN"
             android:textColor="#efe7dd"
