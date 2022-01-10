@@ -85,6 +85,7 @@ public class Register_Screen extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Register_Screen.this, Login_Screen.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

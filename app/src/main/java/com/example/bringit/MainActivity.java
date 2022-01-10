@@ -97,7 +97,27 @@ public class MainActivity extends AppCompatActivity implements FoodFragment.OnPr
 
             }
         });
+
+
 }
+    public void getFav(View view){
+
+    }
+    public void getMeatball(View view){
+
+    }
+    public void getChicken(View view){
+
+    }
+    public void getMeat(View view){
+
+    }
+    public void getDrink(View view){
+
+    }
+    public void getDessert(View view){
+
+    }
 
     /*
     public void getMeatball(View view){

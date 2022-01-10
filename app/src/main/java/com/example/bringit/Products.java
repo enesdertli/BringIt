@@ -8,7 +8,9 @@ import java.util.List;
 
 public class Products implements Parcelable {
     private String description;
-    private int cost;
+    private int cost;   //string olacak
+    //private String food_name;
+    //private String section;
     private List<String> foods = new ArrayList<>();
 
     public Products(String description, int cost, List<String> foods) {

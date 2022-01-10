@@ -51,7 +51,7 @@ public class MyFoodRecyclerViewAdapter extends RecyclerView.Adapter<MyFoodRecycl
                 }
             }
         });
-        holder.itemView.setBackgroundColor(selectedIndex==position ? Color.GREEN : Color.TRANSPARENT);
+        holder.itemView.setBackgroundColor(selectedIndex==position ? Color.WHITE : Color.TRANSPARENT);
     }
 
     @Override

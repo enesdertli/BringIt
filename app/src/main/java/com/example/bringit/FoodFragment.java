@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import com.example.bringit.placeholder.PlaceholderContent;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -55,6 +56,7 @@ public class FoodFragment extends Fragment {
         if (getArguments() != null) {
             mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
         }
+        productsList.add(new Products("Chicken, 32 Turkish Liras",32, Arrays.asList(new String[]{"yes"})));
 
     }
 
