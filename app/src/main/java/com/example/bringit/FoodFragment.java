@@ -19,9 +19,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * A fragment representing a list of Items.
- */
+
 public class FoodFragment extends Fragment {
 
     OnProductSelected listener;
@@ -32,10 +30,7 @@ public class FoodFragment extends Fragment {
     // TODO: Customize parameters
     private int mColumnCount = 1;
 
-    /**
-     * Mandatory empty constructor for the fragment manager to instantiate the
-     * fragment (e.g. upon screen orientation changes).
-     */
+
     public FoodFragment() {
     }
 
@@ -56,8 +51,8 @@ public class FoodFragment extends Fragment {
         if (getArguments() != null) {
             mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
         }
-        productsList.add(new Products("Chicken, 32 Turkish Liras",32, Arrays.asList(new String[]{"yes"})));
-
+        productsList.add(new Products("Chicken, 25 Turkish Liras",32, Arrays.asList(new String[]{"yes"})));
+        productsList.add(new Products("Meat, 32 Turkish Liras",32,Arrays.asList(new String[]{"yes"})));
     }
 
     @Override

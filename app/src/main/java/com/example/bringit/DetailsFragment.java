@@ -13,11 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link DetailsFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class DetailsFragment extends Fragment {
 
 
@@ -28,12 +24,7 @@ public class DetailsFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @return A new instance of fragment DetailsFragment.
-     */
+
     // TODO: Rename and change types and number of parameters
     public static DetailsFragment newInstance(Products products) {
         DetailsFragment fragment = new DetailsFragment();

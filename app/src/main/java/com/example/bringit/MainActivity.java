@@ -1,44 +1,23 @@
 package com.example.bringit;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
-import android.renderscript.ScriptGroup;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.Toast;
 
-import com.example.bringit.databinding.ActivityMainBinding;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreException;
-import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 public class MainActivity extends AppCompatActivity implements FoodFragment.OnProductSelected {
     private FirebaseFirestore firebaseFirestore;
@@ -46,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements FoodFragment.OnPr
     private FirebaseAuth auth;
     private StorageReference storageReference;
 
-
+    Button button;
     ImageView imageHome;
     ImageView imageBasket;
     ImageView imagePerson;
@@ -58,6 +37,9 @@ public class MainActivity extends AppCompatActivity implements FoodFragment.OnPr
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
+        button = findViewById(R.id.btnFavourite);
+        button.performClick();
+
 
 
         firebaseFirestore = FirebaseFirestore.getInstance();
@@ -101,37 +83,56 @@ public class MainActivity extends AppCompatActivity implements FoodFragment.OnPr
 
 }
     public void getFav(View view){
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        Favourite_Fragment favourite_fragment = new Favourite_Fragment();
+        fragmentTransaction.replace(R.id.frame_layout,favourite_fragment).commit();
 
     }
     public void getMeatball(View view){
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
+        Meatball_Fragment meatball_fragment = new Meatball_Fragment();
+        fragmentTransaction.replace(R.id.frame_layout,meatball_fragment).commit();
     }
     public void getChicken(View view){
 
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        Fragment_Chicken fragment_chicken = new Fragment_Chicken();
+        fragmentTransaction.replace(R.id.frame_layout,fragment_chicken).commit();
     }
     public void getMeat(View view){
 
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        Meat_Fragment meat_fragment = new Meat_Fragment();
+        fragmentTransaction.replace(R.id.frame_layout,meat_fragment).commit();
     }
     public void getDrink(View view){
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        Drink_Fragment drink_fragment = new Drink_Fragment();
+        fragmentTransaction.replace(R.id.frame_layout,drink_fragment).commit();
 
     }
     public void getDessert(View view){
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        Dessert_fragment dessert_fragment = new Dessert_fragment();
+        fragmentTransaction.replace(R.id.frame_layout,dessert_fragment).commit();
 
     }
 
-    /*
-    public void getMeatball(View view){
-        String imageName = "meatball/" + "kofte1.jpg";
-        StorageReference newReference = firebaseStorage.getReference(imageName);
-        newReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-            @Override
-            public void onSuccess(Uri uri) {
-                String downloadUrl = uri.toString();
 
-            }
-        });
-    }
 
+/*
     public void getData(){
 
         firebaseFirestore.collection("products").addSnapshotListener(new EventListener<QuerySnapshot>() {

@@ -6,6 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".Add_to_basket">
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnAddToBasket"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
+
     <Button
         android:id="@+id/btnAddToBasket"
         android:layout_width="150dp"
