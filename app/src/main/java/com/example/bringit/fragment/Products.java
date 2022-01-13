@@ -1,4 +1,4 @@
-package com.example.bringit;
+package com.example.bringit.fragment;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -8,9 +8,8 @@ import java.util.List;
 
 public class Products implements Parcelable {
     private String description;
-    private int cost;   //string olacak
-    //private String food_name;
-    //private String section;
+    private int cost;
+
     private List<String> foods = new ArrayList<>();
 
     public Products(String description, int cost, List<String> foods) {
@@ -79,3 +78,5 @@ public class Products implements Parcelable {
         }
     };
 }
+
+

@@ -12,8 +12,19 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import com.example.bringit.fragment.Dessert_fragment;
+import com.example.bringit.fragment.DetailsActivity;
+import com.example.bringit.fragment.DetailsFragment;
+import com.example.bringit.fragment.Drink_Fragment;
+import com.example.bringit.fragment.Favourite_Fragment;
+import com.example.bringit.fragment.FoodFragment;
+import com.example.bringit.fragment.Fragment_Chicken;
+import com.example.bringit.fragment.Meat_Fragment;
+import com.example.bringit.fragment.Meatball_Fragment;
+import com.example.bringit.fragment.Products;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
@@ -29,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements FoodFragment.OnPr
     ImageView imageHome;
     ImageView imageBasket;
     ImageView imagePerson;
+    ImageButton imageButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements FoodFragment.OnPr
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
+
         button = findViewById(R.id.btnFavourite);
         button.performClick();
 
@@ -82,6 +95,10 @@ public class MainActivity extends AppCompatActivity implements FoodFragment.OnPr
 
 
 }
+    public void getDataChicken(View view){
+        Intent intent = new Intent(MainActivity.this,Add_to_basket.class);
+        startActivity(intent);
+    }
     public void getFav(View view){
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -183,3 +200,4 @@ public class MainActivity extends AppCompatActivity implements FoodFragment.OnPr
         }
     }
 }
+

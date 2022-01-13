@@ -1,4 +1,4 @@
-package com.example.bringit;
+package com.example.bringit.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -13,7 +13,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.bringit.placeholder.PlaceholderContent;
+import com.example.bringit.MyFoodRecyclerViewAdapter;
+import com.example.bringit.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -92,3 +93,4 @@ public class FoodFragment extends Fragment {
         void productSelected(Products products);
     }
 }
+

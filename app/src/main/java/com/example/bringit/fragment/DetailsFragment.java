@@ -1,4 +1,4 @@
-package com.example.bringit;
+package com.example.bringit.fragment;
 
 import android.os.Bundle;
 
@@ -12,6 +12,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.example.bringit.R;
 
 
 public class DetailsFragment extends Fragment {
@@ -65,3 +67,4 @@ public class DetailsFragment extends Fragment {
                 ,products.getFoods().toArray(new String[1])));   //problem maybe, get foods?
     }
 }
+

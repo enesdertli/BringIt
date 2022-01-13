@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.bringit.fragment.FoodFragment;
+import com.example.bringit.fragment.Products;
 import com.example.bringit.placeholder.PlaceholderContent.PlaceholderItem;
 import com.example.bringit.databinding.FragmentFoodBinding;
 
@@ -76,3 +78,6 @@ public class MyFoodRecyclerViewAdapter extends RecyclerView.Adapter<MyFoodRecycl
         }
     }
 }
+
+
+

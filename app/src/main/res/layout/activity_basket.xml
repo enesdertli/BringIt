@@ -4,7 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:onClick="goToOrder"
     tools:context=".Basket">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="150dp"
+        android:layout_height="144dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnConfirmBasket"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtYourItems"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@mipmap/img_chicken1" />
 
     <TextView
         android:id="@+id/txtYourItems"
@@ -22,12 +35,12 @@
         android:id="@+id/btnConfirmBasket"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="104dp"
         android:layout_marginRight="32dp"
+        android:layout_marginBottom="104dp"
         android:background="@drawable/button_background_pink"
-        android:textColor="#efe7dd"
         android:padding="16dp"
         android:text="CONFIRM BASKET"
+        android:textColor="#efe7dd"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,3 +96,4 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+

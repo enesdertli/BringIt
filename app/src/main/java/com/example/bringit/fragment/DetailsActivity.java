@@ -1,9 +1,11 @@
-package com.example.bringit;
+package com.example.bringit.fragment;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+
+import com.example.bringit.R;
 
 public class DetailsActivity extends AppCompatActivity {
 
@@ -19,3 +21,4 @@ public class DetailsActivity extends AppCompatActivity {
         fts.commit();
     }
 }
+

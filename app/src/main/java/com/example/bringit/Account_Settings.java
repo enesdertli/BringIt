@@ -9,12 +9,19 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 public class Account_Settings extends AppCompatActivity {
 
+
     private FirebaseAuth auth;
+
+
 
     ImageView imageHome;
     ImageView imageBasket;
@@ -27,6 +34,7 @@ public class Account_Settings extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_account_settings);
+
 
         auth = FirebaseAuth.getInstance();
 
@@ -60,6 +68,9 @@ public class Account_Settings extends AppCompatActivity {
             }
         });
 
+
+
+
     }
 
     public void signOut(View view){
@@ -69,3 +80,4 @@ public class Account_Settings extends AppCompatActivity {
         finish();
     }
 }
+

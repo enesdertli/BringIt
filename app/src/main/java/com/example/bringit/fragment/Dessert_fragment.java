@@ -1,4 +1,4 @@
-package com.example.bringit;
+package com.example.bringit.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,6 +9,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.bringit.R;
+
 public class Dessert_fragment extends Fragment {
 
     @Nullable
@@ -17,3 +19,4 @@ public class Dessert_fragment extends Fragment {
         return inflater.inflate(R.layout.dessert_fragment,container,false);
     }
 }
+

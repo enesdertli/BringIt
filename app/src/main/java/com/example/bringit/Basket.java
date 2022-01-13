@@ -64,8 +64,10 @@ public class Basket extends AppCompatActivity {
             }
         });
     }
-
-    /*public void trashBasket(View view){
-        Delete all the items in basket
-    }*/
+    public void goToOrder(View view){
+        Intent intent = new Intent(Basket.this,Order_Screen.class);
+        startActivity(intent);
+        finish();
+    }
 }
+

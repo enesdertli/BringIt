@@ -7,3 +7,5 @@ public class EmailCheck {
         assertTrue(Register_Screen.isValidEmail("eneshaha@gmail.com"));
     }
 }
+
+

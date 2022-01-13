@@ -6,7 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".Add_to_basket">
 
+    <TextView
+        android:id="@+id/idTVRetrieveData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retrieve Data"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_chicken1_addtobasket" />
+
+    <ImageView
+        android:id="@+id/img_chicken1_addtobasket"
+        android:layout_width="217dp"
+        android:layout_height="181dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/frameLayout"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@mipmap/img_chicken1" />
+
     <FrameLayout
+        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/btnAddToBasket"
@@ -21,9 +46,10 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="144dp"
         android:background="@drawable/button_background_pink"
-        android:textColor="#efe7dd"
+        android:onClick="goToBasket"
         android:padding="16dp"
         android:text="Add to Basket"
+        android:textColor="#efe7dd"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -68,3 +94,4 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
