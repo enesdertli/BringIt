@@ -30,6 +30,8 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@mipmap/img_chicken1" />
 
+
+
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"

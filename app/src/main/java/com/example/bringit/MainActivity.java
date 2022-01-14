@@ -6,7 +6,9 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.nfc.Tag;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -36,6 +38,10 @@ public class MainActivity extends AppCompatActivity implements FoodFragment.OnPr
     private FirebaseAuth auth;
     private StorageReference storageReference;
 
+
+
+
+
     Button button;
     ImageView imageHome;
     ImageView imageBasket;
@@ -52,7 +58,6 @@ public class MainActivity extends AppCompatActivity implements FoodFragment.OnPr
 
         button = findViewById(R.id.btnFavourite);
         button.performClick();
-
 
 
         firebaseFirestore = FirebaseFirestore.getInstance();
@@ -98,6 +103,11 @@ public class MainActivity extends AppCompatActivity implements FoodFragment.OnPr
     public void getDataChicken(View view){
         Intent intent = new Intent(MainActivity.this,Add_to_basket.class);
         startActivity(intent);
+
+
+        /*new Thread( new Runnable() { @Override public void run() {
+            button.setText("asdd");
+        } } ).start();*/
     }
     public void getFav(View view){
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -199,5 +209,8 @@ public class MainActivity extends AppCompatActivity implements FoodFragment.OnPr
             }
         }
     }
+
 }
+
+
 

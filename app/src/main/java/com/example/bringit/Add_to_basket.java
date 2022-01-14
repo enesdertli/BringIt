@@ -3,6 +3,9 @@ package com.example.bringit;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -34,6 +37,7 @@ import java.util.Map;
 
 public class Add_to_basket extends AppCompatActivity {
 
+
     private FirebaseFirestore firebaseFirestore;
     private FirebaseStorage firebaseStorage;
     private FirebaseAuth auth;
@@ -42,17 +46,19 @@ public class Add_to_basket extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
 
-
+    private Handler mainHandler = new Handler();
+    private volatile boolean stopThread = false;
     private TextView retrieveTV;
     ImageView imageHome;
     ImageView imageBasket;
     ImageView imagePerson;
-    Button btnAddToBasket;
+    Button button;
 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -60,11 +66,10 @@ public class Add_to_basket extends AppCompatActivity {
         setContentView(R.layout.activity_add_to_basket);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
-
-
         databaseReference = firebaseDatabase.getReference("Data");
+        button = findViewById(R.id.btnAddToBasket);
 
-        // initializing our object class variable.
+
         retrieveTV = findViewById(R.id.idTVRetrieveData);
         getdata();
 
@@ -97,15 +102,7 @@ public class Add_to_basket extends AppCompatActivity {
                 finish();
             }
         });
-        btnAddToBasket = findViewById(R.id.btnAddToBasket);
-        btnAddToBasket.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Add_to_basket.this,Basket.class);
-                startActivity(intent);
-                finish();
-            }
-        });
+
     }
 
 
@@ -125,11 +122,16 @@ public class Add_to_basket extends AppCompatActivity {
             }
         });
     }
+
+
+
+
     public void goToBasket(View view){
 
         Intent intent = new Intent(Add_to_basket.this,Basket.class);
         startActivity(intent);
         finish();
     }
+
 }
 
